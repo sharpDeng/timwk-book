@@ -10,6 +10,7 @@
     * `add a license` 选择 `MIT license`即可, 这是一个开源证书
     * 最后点击 `Create repository` 即可生成一个远程仓库
 3. 将远程仓库用 `git clone <path>` 拉取到本地
+4. 进入到项目根目录，使用命令行`git branch gh-pages` 新建一个`gh-pages`的 git 分支(后续部署需要用到)
 
 # 构建gitbook
 
@@ -54,4 +55,12 @@
 
 # 项目部署
 
-1.
+## 生成成产包
+
+1. 先在`.gitignore`文件最后添加`_book/` 语句(这个是`gitbook`项目生成的生产包文件)
+1. 先将更改的代码使用`git add -all` 和 `git commit -m "提交信息"`提交到本地仓库；
+1. 使用`gitbook build` 生成生产包`_book`（这个文件部署到web服务器上即可访问了）
+
+## 部署到github上
+
+1. 终端进入到`_book`文件夹中，新建`git`仓库，然后使用`git remote add origin <path>`和远程仓库进行关联
