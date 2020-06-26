@@ -80,3 +80,5 @@
 1. 终端进入到`_book`文件夹中，新建`git`仓库，然后使用`git remote add origin <path>`和远程仓库进行关联
 2. 将代码提交到本地仓库，然后使用`git push -u origin master:gh-pages`将内容推送到远程仓库的`gh-pages`分支上(如远程仓库没有该分支会新建分支)
 3. 浏览器打开 `https://<accountName>.github.io/<repository name>/` 即可打开已部署的项目，例如： [https://sharpDeng.github.io/timwk-book/](https://sharpDeng.github.io/timwk-book/)
+
+上面是人工发布部署的步骤，下面我们来看看自动部署;
