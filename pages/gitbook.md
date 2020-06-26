@@ -17,7 +17,8 @@
 1. 下载相关依赖 `npm i -g gitbook-cli`
 2. 进入到上述第三步拉取下来带本地的`github`项目的根目录, 新建`README.md`（简介）、`SUMMARY.md`（目录）;
 3. 然后新建章节文件 `chapter01.md`, `chapter02.md`;
-4. 给文件添加内容：
+4. 新建配置文件`book.json`
+5. 给文件添加内容：
 
 编写简介文件，就是
 
@@ -51,6 +52,19 @@
 ...
 ```
 
+配置文件内容
+
+```javascript
+// book.json
+{
+    "root": "timwk-book",  // 根目录，需要填你的github的repository name
+    "title": "自动化构建说明", // 项目的名称
+    "author": "timwk"   // 作者
+}
+
+// 注：该文件是 json 文件，应严格按照json文件格式编写
+```
+
 这样就得到一个gitbook项目了，然后接下我们要把项目代码github上，同时部署到github上；
 
 # 项目部署
@@ -64,3 +78,5 @@
 ## 部署到github上
 
 1. 终端进入到`_book`文件夹中，新建`git`仓库，然后使用`git remote add origin <path>`和远程仓库进行关联
+2. 将代码提交到本地仓库，然后使用`git push -u origin master:gh-pages`将内容推送到远程仓库的`gh-pages`分支上(如远程仓库没有该分支会新建分支)
+3. 浏览器打开 `https://<accountName>.github.io/<repository name>/` 即可打开已部署的项目，例如： [https://sharpDeng.github.io/timwk-book/](https://sharpDeng.github.io/timwk-book/)
