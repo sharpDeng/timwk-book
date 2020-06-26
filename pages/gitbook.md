@@ -57,7 +57,7 @@
 ```javascript
 // book.json
 {
-    "root": "timwk-book",  // 根目录，需要填你的github的repository name
+    "root": "",  // 根目录，需要填你的github的repository name
     "title": "自动化构建说明", // 项目的名称
     "author": "timwk"   // 作者
 }
