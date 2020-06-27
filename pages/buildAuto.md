@@ -14,7 +14,8 @@
     * install  //安装项目依赖，默认值是 `npm installl`
     * before_script
     * script   // 执行构建任务，包括单元测试,默认值 `npm test`
-    * after_success 或 after_failure 或 after_script  // success 是前面script执行成功后执行， failure则是失败后执行， after_script 则是不管成功或失败都执行
+    * after_success 或 after_failure 或 after_script  // success 是前面script执行成功后执行， failure则是失败后执行，
+    * after_script: script 步骤之后执行
     * before_deploy(可选)
     * deploy(可选)  // 执行部署任务
     * after_deploy (可选)
