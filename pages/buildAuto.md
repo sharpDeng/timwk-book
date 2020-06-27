@@ -4,6 +4,21 @@
 
 >完成了项目创建，现在我们进入我们的主题--自动化构建
 
+### 关于 Travis CI
+
+1. 默认执行两个脚本
+    * `- npm install`  安装项目依赖
+    * `- npm test`      执行测试
+2. `Travis CI` 默认依次执行以下九个脚本
+    * before_install
+    * install  //安装项目依赖，默认值是 `npm installl`
+    * before_script
+    * script   // 执行构建任务，包括单元测试,默认值 `npm test`
+    * after_success 或 after_failure 或 after_script  // success 是前面script执行成功后执行， failure则是失败后执行， after_script 则是不管成功或失败都执行
+    * before_deploy(可选)
+    * deploy(可选)  // 执行部署任务
+    * after_deploy (可选)
+
 ### 步骤
 
 1. 登录，使用你的 `github`账号登录 [Travis CI](https://travis-ci.org/);
@@ -57,3 +72,5 @@
     ```
 
 6. 将修改的代码提交上传后，即可在`Travis CI` 中查看到项目正在构建了，构建成功后，你可以打开[https://github.com/sharpDeng/timwk-book](https://github.com/sharpDeng/timwk-book) 进行查看
+
+以上就是自动化构建的步骤，小伙伴觉得有用的给个赞！
